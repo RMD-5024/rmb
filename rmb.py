@@ -74,6 +74,8 @@ def num_progress(num):
 			rmb_num_float_list[s]=rmb_list[int(num_float_list[s])]+float_unit_list[s]#数字+单位
 			if num_float_list[0]=='0' and num_float_list[1]!='0':#如果有零要去除单位
 				rmb_num_float_list[0]=rmb_num_float_list[0][0]
+			if num_float_list[0]=='0' and num_float_list[1]==' ':#如果角为0没有分去除小数
+				rmb_num_float_list[0]=' '
 			if num_float_list[1]=='0':#如果 分 单位为0 去除0
 				rmb_num_float_list[1]=' '
 	#结果
